@@ -19,6 +19,7 @@ Returns user name with token:
 
 
 Method: POST
+
 Endpoint: https://wooliesxapi.azurewebsites.net/api/Exercise/exercise2/sort?sortOption=Recommended
 This end point returns products in a sorted manner based on the sortOption passed in the querystring.
 
