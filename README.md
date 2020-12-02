@@ -77,9 +77,10 @@ Endpoint: https://wooliesxapi.azurewebsites.net/api/Exercise/exercise3/trolleyTo
 This endpoint returns the minimum possible total bill of the items in a trolley taking into consideration any applicable special offers.
 
 Sample Request Body:
-
-                
-
+{
+        "products":[
+                {
+                "name" : "B
 
 
 Sample Request Response:
