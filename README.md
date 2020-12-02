@@ -78,51 +78,8 @@ This endpoint returns the minimum possible total bill of the items in a trolley 
 
 Sample Request Body:
 
-{
-  "products": [
-    {
-      "name": "A",
-      "price": 10
-    },
-    {
-    	"name": "B",
-    	"price": 5
-    	
-    }
-  ],
-  "specials": [
-    {
-      "quantities": [
-        {
-          "name": "A",
-          "quantity": 3
-        }
-      ],
-      "total": 6
-    },
-    {
-      "quantities": [
-        {
-          "name": "B",
-          "quantity": 4
-        }
-      ],
-      "total": 3
-    }
-  ],
-  "quantities": [
-    {
-      "name": "A",
-      "quantity": 14
-    },
-    {
-    "name": "B",
-    "quantity": 5
-    }
-  ]
-}
+                
 
- 
 
 
 Sample Request Response:
