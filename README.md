@@ -4,6 +4,7 @@ This API contains the following end points:
 
 
 Method: GET
+
 Endpoint: https://wooliesxapi.azurewebsites.net/api/Exercise/exercise1/User
 Returns user name with token:
 
@@ -71,53 +72,57 @@ This end point returns products in a sorted manner based on the sortOption passe
           
           
 Method POST
+
 Endpoint: https://wooliesxapi.azurewebsites.net/api/Exercise/exercise3/trolleyTotal
 This endpoint returns the minimum possible total bill of the items in a trolley taking into consideration any applicable special offers.
 
 Sample Request Body:
 
- {
-   "products":[
-      {
-         "name":"A",
-         "price":10
-      },
-      {
-         "name":"B",
-         "price":5
-      }
-   ],
-   "specials":[
-      {
-         "quantities":[
-            {
-               "name":"A",
-               "quantity":3
-            }
-         ],
-         "total":6
-      },
-      {
-         "quantities":[
-            {
-               "name":"B",
-               "quantity":4
-            }
-         ],
-         "total":3
-      }
-   ],
-   "quantities":[
-      {
-         "name":"A",
-         "quantity":14
-      },
-      {
-         "name":"B",
-         "quantity":5
-      }
-   ]
+{
+  "products": [
+    {
+      "name": "A",
+      "price": 10
+    },
+    {
+    	"name": "B",
+    	"price": 5
+    	
+    }
+  ],
+  "specials": [
+    {
+      "quantities": [
+        {
+          "name": "A",
+          "quantity": 3
+        }
+      ],
+      "total": 6
+    },
+    {
+      "quantities": [
+        {
+          "name": "B",
+          "quantity": 4
+        }
+      ],
+      "total": 3
+    }
+  ],
+  "quantities": [
+    {
+      "name": "A",
+      "quantity": 14
+    },
+    {
+    "name": "B",
+    "quantity": 5
+    }
+  ]
 }
+
+ 
 
 
 Sample Request Response:
