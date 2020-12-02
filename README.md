@@ -86,7 +86,6 @@ Sample Request Body:
     {
     	"name": "B",
     	"price": 5
-    	
     }
   ],
   "specials": [
