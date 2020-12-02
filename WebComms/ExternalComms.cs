@@ -19,7 +19,7 @@ namespace ExternalComms
         }
 
 
-        public ResultValue<Exercise1Response> GetExercise1Response(string resource)
+        public ResultValue<Exercise1Response> GetExercise1Response()
         {
 
             Exercise1Response resp = new Exercise1Response()

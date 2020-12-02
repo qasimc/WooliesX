@@ -15,9 +15,9 @@ namespace WooliesX.Services
         {
             ExternalComms = externalComms;
         }
-        public ResultValue<Exercise1Response> GetUser(string resource)
+        public ResultValue<Exercise1Response> GetUser()
         {
-            var response = ExternalComms.GetExercise1Response(resource + "/User");
+            var response = ExternalComms.GetExercise1Response();
             return response;
 
         }

@@ -26,10 +26,10 @@ namespace WooliesX.Controllers
             Exercise3Service = exercise3Service;
         }
 
-        [HttpPost("exercise1")]
-        public IActionResult Exercise1([FromBody] ApiRequest request)
+        [HttpGet("exercise1/user")]
+        public IActionResult Exercise1()
         {
-            var result = Exercise1Service.GetUser(request.url);
+            var result = Exercise1Service.GetUser();
             if(result.IsOk)
             {
                 Exercise1Response response = new Exercise1Response()
@@ -37,7 +37,7 @@ namespace WooliesX.Controllers
                     name = result.Value.name,
                     token = result.Value.token
                 };
-                return Ok(new ApiResponse() { passed = true, url = request.url, message = response });
+                return Ok(new ApiResponse() { passed = true, url = "", message = response });
             }
             else
             {
@@ -64,7 +64,15 @@ namespace WooliesX.Controllers
         [HttpPost("Exercise3/trolleyTotal")]
         public IActionResult Exercise3([FromBody] TrolleyRequest trolleyRequest)
         {
-            return Ok(Exercise3Service.CalculateMinimumTrolleyTotal(trolleyRequest.specials, trolleyRequest.products, trolleyRequest.quantities));
+            var result = Exercise3Service.CalculateMinimumTrolleyTotal(trolleyRequest.specials, trolleyRequest.products, trolleyRequest.quantities);
+            if (result.IsOk)
+            {
+                return Ok(result.Value);
+            }
+            else
+            {
+                return BadRequest(new ApiResponse() { passed = false, url = "", message = result.Errors });
+            }
         }
     }
 }

@@ -7,7 +7,7 @@ namespace WooliesX.Domain.Interfaces
 {
     public interface IExternalComms
     {
-        ResultValue<Exercise1Response> GetExercise1Response(string resource);
+        ResultValue<Exercise1Response> GetExercise1Response();
         ResultValue<List<Product>> GetExercise2Response(string resource, string token);
         ResultValue<List<ShopperHistory>> GetShopperHistory(string token);
     }

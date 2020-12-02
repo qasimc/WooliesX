@@ -8,6 +8,6 @@ namespace WooliesX.Service.Interfaces
 {
     public interface IExercise1Service
     {
-        ResultValue<Exercise1Response> GetUser(string resource);
+        ResultValue<Exercise1Response> GetUser();
     }
 }
